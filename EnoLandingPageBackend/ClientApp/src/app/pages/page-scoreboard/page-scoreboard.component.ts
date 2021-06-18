@@ -52,7 +52,7 @@ export class PageScoreboardComponent implements OnInit {
     private scoreboardInfoService: ScoreboardInfoService,
     private ref: ChangeDetectorRef
   ) {}
-  
+
   ngOnInit(): void {
     // this.ref.detach();
   }
