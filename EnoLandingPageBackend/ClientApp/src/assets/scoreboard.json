@@ -152,7 +152,7 @@
           "defenseScore": 0,
           "serviceLevelAgreementScore": 0.8660254037844386,
           "serviceStatus": "MUMBLE",
-          "message": "received on /errors: \u0022MESSAGE\ndestination:/errors/cxcfQOdhxh4jt2GPvY4KQ_dcFCg/x\ncontent-type:text/plain;charset=UTF-8\nsubscription:118\nmessage-id:8f2a56d8-0e0b-5de0-85f2-b1b00efe1813-6993\ncontent-length:33\n\nInvalid Token- No such User in DB\u0022"
+          "message": "received on /errors: \"MESSAGE\ndestination:/errors/cxcfQOdhxh4jt2GPvY4KQ_dcFCg/x\ncontent-type:text/plain;charset=UTF-8\nsubscription:118\nmessage-id:8f2a56d8-0e0b-5de0-85f2-b1b00efe1813-6993\ncontent-length:33\n\nInvalid Token- No such User in DB\""
         },
         {
           "serviceId": 10,
@@ -252,7 +252,7 @@
           "defenseScore": 0,
           "serviceLevelAgreementScore": 0.8660254037844386,
           "serviceStatus": "MUMBLE",
-          "message": "received on /errors: \u0022MESSAGE\ndestination:/errors/W6QklWm6oEbWNKR2cHYpTIy82zw/x\ncontent-type:text/plain;charset=UTF-8\nsubscription:475\nmessage-id:f2d4bcc9-5cbd-860f-e925-eb0c1a10f19a-6996\ncontent-length:33\n\nInvalid Token- No such User in DB\u0022"
+          "message": "received on /errors: \"MESSAGE\ndestination:/errors/W6QklWm6oEbWNKR2cHYpTIy82zw/x\ncontent-type:text/plain;charset=UTF-8\nsubscription:475\nmessage-id:f2d4bcc9-5cbd-860f-e925-eb0c1a10f19a-6996\ncontent-length:33\n\nInvalid Token- No such User in DB\""
         },
         {
           "serviceId": 10,
