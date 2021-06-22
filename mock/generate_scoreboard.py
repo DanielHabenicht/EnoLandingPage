@@ -10,7 +10,7 @@ import glob
 
 SERVICE_COUNT = 11
 TEAM_COUNT = 100
-ROUND_LENGTH_SECONDS = 15
+ROUND_LENGTH_SECONDS = 60
 currentRound = len(glob.glob("./*")) - 1
 
 services = []
@@ -73,7 +73,7 @@ def generate(scoreboard, currentRound):
                 "attackScore": scoreboard["teams"][t]["serviceDetails"][s]["attackScore"] + attack,
                 "defenseScore": scoreboard["teams"][t]["serviceDetails"][s]["defenseScore"] + defense,
                 "serviceLevelAgreementScore": scoreboard["teams"][t]["serviceDetails"][s]["serviceLevelAgreementScore"] + sla,
-                "serviceStatus": "OK",  # todo: make random ?
+                "serviceStatus": random.choice(["OK", "OK", "OK", "OK", "OK", "OK", "MUMBLE", "INTERNAL_ERROR", "RECOVERING"]),
                 "message": None
             }
 

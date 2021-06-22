@@ -26,6 +26,10 @@
   min-width: 50px;
   padding-left: 2px !important;
 
+  &.highlighted {
+    background-color: cornflowerblue;
+  }
+
   .team-cell {
     display: flex;
 
@@ -33,6 +37,7 @@
       align-self: center;
       margin: 2px 8px 2px 5px;
       text-align: right;
+      min-width: 24px;
     }
 
     .texts {

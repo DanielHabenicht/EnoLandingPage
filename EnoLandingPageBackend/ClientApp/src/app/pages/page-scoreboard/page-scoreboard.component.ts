@@ -20,6 +20,10 @@ import {
   DialogInfoComponent,
   InfoDialogData,
 } from './dialog-info/dialog-info.component';
+import { TeamDetailsMessage } from 'projects/backend-api/src/lib/model/teamDetailsMessage';
+import { Observable } from 'rxjs';
+import { AppState } from 'src/app/shared/states/App.state';
+import { Select } from '@ngxs/store';
 
 @Component({
   selector: 'app-page-scoreboard',
@@ -28,6 +32,9 @@ import {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PageScoreboardComponent implements OnInit {
+  @Select(AppState.teamInfo)
+  public teamInfo$!: Observable<TeamDetailsMessage>;
+
   public round: number = 0;
   public roundLength: number = 60;
   public isCurrentRound: boolean = false;
@@ -77,8 +84,7 @@ export class PageScoreboardComponent implements OnInit {
       .get<Scoreboard>('/api/scoreboardinfo/scoreboard' + suffix + '.json')
       .subscribe((scoreboard) => {
         this.round = scoreboard.currentRound!;
-        // TODO: debug!!!
-        this.roundLength = 15; //scoreboard.roundLength ?? 60;
+        this.roundLength = scoreboard.roundLength ?? 60;
         this.services =
           scoreboard.services?.sort((a, b) => a.serviceId! - b.serviceId!) ||
           [];
@@ -101,7 +107,9 @@ export class PageScoreboardComponent implements OnInit {
         };
 
         this.dataSource.data =
-          scoreboard.teams?.map((team) => {
+          scoreboard.teams?.sort((lhs, rhs) => {
+            return rhs.totalScore - lhs.totalScore;
+          }).map((team) => {
             let row: any = {
               team: team,
             };
