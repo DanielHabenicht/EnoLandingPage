@@ -299,7 +299,7 @@ while True:
     scoreboard["endTimestamp"] = endTimestamp.isoformat()
 
     # todo: debug
-    time.sleep(6)
+    # time.sleep(6)
 
     # save(scoreboard, currentRound)
     try:
